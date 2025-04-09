@@ -1,6 +1,7 @@
 import { Button, Checkbox, Form, Input, Typography, Flex, Divider, Image } from 'antd';
 import { DeviconGoogle } from '@/assets/DeviconGoogle.jsx';
 import uwbc from '@/assets/UWBC_cover.png';
+import logo from '@/assets/logo.png'
 
 const { Text, Link } = Typography;
 
@@ -16,8 +17,12 @@ const Login= () => {
     <div style={{display: 'flex'}}>
       <div style={{ height: '100vh', width:'45vw'}}>
         {/* login form */}
-        <div style={{ marginTop: '15px', marginLeft: '20px'}}> 
-          Logo 
+        <div style={{ marginTop: '5px', marginLeft: '15px', marginBottom: '-40px'}}> 
+           <img
+            src={logo}
+            alt="logo"
+            style={{ height: '75px', width: '75px' }}
+            />
         </div>
         <div style={{ textAlign: 'center', marginTop: '120px' }}>
           <h1 style={{ fontSize: '24px', fontWeight: 'bold' }}>Login to your account</h1>
