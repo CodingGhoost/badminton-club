@@ -1,4 +1,4 @@
-import { Button, Checkbox, Form, Input, Typography, Flex, Divider, Image } from 'antd';
+import { Button, Checkbox, Form, Input, Typography, Flex, Divider } from 'antd';
 import { DeviconGoogle } from '@/assets/DeviconGoogle.jsx';
 import uwbc from '@/assets/UWBC_cover.png';
 import logo from '@/assets/logo.png'

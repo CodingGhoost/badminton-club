@@ -16,10 +16,16 @@ root.render(
           "colorError": "#f5222d",
           "colorPrimary": "#000000",
           "colorInfo": "#000000",
-          "colorPrimaryTextHover": "#202020",
-          "colorPrimaryHover": "#202020",
+          "colorPrimaryTextHover": "#101828",
+          "colorPrimaryHover": "#101828",
           "colorPrimaryBg": "#0000001a",
-          "colorPrimaryBgHover": "#919191"
+          "colorPrimaryBgHover": "#919191",
+          "darkItemSelectedBg": "#1e2938"
+        },
+        "components": {
+          "Menu": {
+            "darkItemSelectedBg": "#1e2938"
+          }
         }
       }}
     >
