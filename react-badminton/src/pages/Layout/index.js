@@ -18,10 +18,10 @@ const Home = () => {
   return (
     <Layout style={{height: '100vh'}}>
       <Layout>
-        <Sider style={{ background: '#101828'}} width={240} >
+        <Sider style={{ background: '#000000'}} width={240} >
           <div style={{margin: '20px', color:'white'}}>Logo</div>
           <Menu
-            style={{ background: '#101828', fontSize:'18px' }}
+            style={{ background: '#000000', fontSize:'18px' }}
             theme="dark"
             mode="inline"
             defaultSelectedKeys={['1']}
@@ -29,17 +29,17 @@ const Home = () => {
               {
                 key: '1',
                 icon: <UserOutlined style={ menuIconStyle }/>,
-                label: 'nav 1',
+                label: 'Dashboard',
               },
               {
                 key: '2',
                 icon: <VideoCameraOutlined style={ menuIconStyle }/>,
-                label: 'nav 2',
+                label: 'Courts',
               },
               {
                 key: '3',
                 icon: <UploadOutlined style={ menuIconStyle }/>,
-                label: 'nav 3',
+                label: 'Members',
               },
             ]}
           />

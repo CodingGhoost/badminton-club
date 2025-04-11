@@ -24,7 +24,7 @@ root.render(
         },
         "components": {
           "Menu": {
-            "darkItemSelectedBg": "#1e2938"
+            "darkItemSelectedBg": "#2d2d2d",
           }
         }
       }}
