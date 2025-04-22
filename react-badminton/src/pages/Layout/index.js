@@ -1,23 +1,28 @@
-import Icon, {
-  HomeOutlined,
+import {
   IdcardOutlined,
   SearchOutlined,
   ScheduleOutlined,
   AppstoreOutlined,
-  VerticalRightOutlined,
 } from '@ant-design/icons';
-import { ShuttleIcon } from '@/assets/ShuttleIcon.jsx';
+import { Outlet, useNavigate } from 'react-router-dom';
 import { Button, Layout, Menu, theme, Space } from 'antd';
 import avatar from '@/assets/avatar.png';
-const { Header, Sider, Content, Footer } = Layout;
+const { Sider } = Layout;
 const menuIconStyle = {
-  fontSize:'20px',
+  fontSize:'22px',
 }
 
 const Home = () => {
   const {
     token: { colorBgContainer, borderRadiusLG },
   } = theme.useToken();
+
+  const navigate = useNavigate();
+  const onMenuClick = (route) => {
+    const path = route.key;
+    navigate(path);
+  }
+
   return (
     <Layout style={{height: '100vh'}}>
       <Layout>
@@ -25,28 +30,29 @@ const Home = () => {
           <div style={{margin: '20px', color:'white'}}>Logo</div>
           <div style={{ height:'650px', display:'flex', justifyContent:'space-between', flexDirection:'column'}}>
             <Menu
-              style={{ background: '#000000', fontSize:'15px' }}
+              style={{ background: '#000000', fontSize:'16px' }}
               theme="dark"
               mode="inline"
-              defaultSelectedKeys={['1']}
+              defaultSelectedKeys={['/dashboard']}
+              onClick={onMenuClick}
               items={[
                 {
-                  key: '1',
+                  key: '/dashboard',
                   icon: <AppstoreOutlined style={ menuIconStyle }/>,
                   label: 'Dashboard',
                 },
                 {
-                  key: '2',
+                  key: '/session',
                   icon: <ScheduleOutlined style={ menuIconStyle }/>,
                   label: 'Session',
                 },
                 {
-                  key: '3',
+                  key: '/search',
                   icon: <SearchOutlined style={ menuIconStyle }/>,
                   label: 'Search',
                 },
                 {
-                  key: '4',
+                  key: '/profile',
                   icon: <IdcardOutlined style={ menuIconStyle }/>,
                   label: 'Profile',
                 },
@@ -64,8 +70,8 @@ const Home = () => {
             </div>
           </div>
         </Sider>
-        <Layout style={{ background: colorBgContainer }}>
-          <Content>main content</Content>
+        <Layout style={{ background: colorBgContainer, padding:'0 20px 20px 20px' }}>
+          <Outlet/>
         </Layout>
       </Layout>
     </Layout>
