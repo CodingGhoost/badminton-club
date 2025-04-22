@@ -29,6 +29,7 @@ root.render(
           "Table": {
             "headerBg": "#000000",
             "headerColor": "#EFEFEF",
+            "headerBorderRadius": "2px",
           }
 
         }

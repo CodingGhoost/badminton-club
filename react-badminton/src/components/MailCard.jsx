@@ -65,6 +65,16 @@ const data = [
     title: 'Alex',
     status: 'unread',
   },
+  {
+    key: '7',
+    title: 'Daniel',
+    status: 'read',
+  },
+  {
+    key: '8',
+    title: 'Max',
+    status: 'unread',
+  },
 ];
 
 const MailCard = () => 
@@ -72,10 +82,10 @@ const MailCard = () =>
     columns={columns} 
     dataSource={data}
     pagination={false} 
-    scroll={{ y: '250px'}}
+    scroll={{ y: '315px'}}
     size="middle"
     onHeaderRow = {() => ({
-      style: { height:'0px', padding:'0px' },
+      style: { height:'30px', padding:'0px', lineHeight:'0px', },
     })}
     />;
 export default MailCard;
