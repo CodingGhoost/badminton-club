@@ -25,7 +25,12 @@ root.render(
         "components": {
           "Menu": {
             "darkItemSelectedBg": "#2d2d2d",
+          },
+          "Table": {
+            "headerBg": "#000000",
+            "headerColor": "#EFEFEF",
           }
+
         }
       }}
     >
