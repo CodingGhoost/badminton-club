@@ -28,7 +28,6 @@ const columns = [
       return <Tag color={color}>{status.toUpperCase()}</Tag>;
     },
     width:'100px',
-    align:'center',
     onHeaderCell: () => ({
       style: { textAlign: 'left'},
     }),

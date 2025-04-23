@@ -1,11 +1,12 @@
-import MailCard from '@/components/MailCard';
+import MailCard from '@/components/dashboard/MailCard';
+import ProfileCard from '@/components/dashboard/ProfileCard';
 import { Col, Row, Card, } from 'antd';
 
 const Dashboard = () => {
   return (
     <div>
       <h1 style={{ fontSize:'35px', marginTop:'35px', marginLeft:'15px'}}>Welcome to UWBC, Wayne</h1>
-      <Row style={{marginLeft:'15px'}}>
+      <Row style={{marginLeft:'15px', width:'76vw'}}>
         <Col span={16}>
           <div style={{ height:'351px', border: '1px solid rgb(119, 119, 119)', borderRadius:'3px'}}>
             <MailCard />
@@ -13,13 +14,11 @@ const Dashboard = () => {
         </Col>
         <Col span={8}>
           <Card style={{ height: '350px', marginLeft:'30px', border: '1px solid rgb(119, 119, 119)',  }}>
-            <p>Card content</p>
-            <p>Card content</p>
-            <p>Card content</p>
+            <ProfileCard/>
           </Card>
         </Col>
       </Row>
-      <Row style={{marginLeft:'15px', marginTop:'25px'}} justify='space-between' >
+      <Row style={{marginLeft:'15px', marginTop:'25px', width:'76vw'}} justify='space-between' >
         <Col span={5}>
           <Card style={{ height: '200px', border: '1px solid rgb(119, 119, 119)'}}>
             <p>SEELE</p>
