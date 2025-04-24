@@ -7,6 +7,7 @@ import {
 import { Outlet, useNavigate } from 'react-router-dom';
 import { Button, Layout, Menu, theme, Space } from 'antd';
 import avatar from '@/assets/avatar.png';
+import logoWhite from '@/assets/Logo-White.png'
 const { Sider } = Layout;
 const menuIconStyle = {
   fontSize:'22px',
@@ -27,8 +28,10 @@ const Home = () => {
     <Layout style={{height: '100vh'}}>
       <Layout>
         <Sider style={{ background: '#000000'}} width={280}>
-          <div style={{margin: '20px', color:'white'}}>Logo</div>
-          <div style={{ height:'650px', display:'flex', justifyContent:'space-between', flexDirection:'column'}}>
+          <div style={{margin: '20px'}}>
+            <img style={{height:'55px'}} src={logoWhite} alt='logo-white'/>
+          </div>
+          <div style={{ height:'610px', display:'flex', justifyContent:'space-between', flexDirection:'column'}}>
             <Menu
               style={{ background: '#000000', fontSize:'16px' }}
               theme="dark"

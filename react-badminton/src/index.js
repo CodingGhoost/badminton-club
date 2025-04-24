@@ -30,6 +30,9 @@ root.render(
             "headerBg": "#000000",
             "headerColor": "#EFEFEF",
             "headerBorderRadius": "2px",
+          },
+          "Progress": {
+            "circleTextColor":"#DBDBDB"
           }
 
         }
