@@ -9,7 +9,7 @@ const formatWithDayjs = () => {
 const SessionStatus = () => 
   <div>
     <div style={{backgroundColor:'white', display:'flex', flexDirection:'column'}}>
-      <span style={{fontWeight:'bold', fontSize:'15px'}}>{formatWithDayjs()}</span>
+      <span style={{ fontWeight:'bold', fontSize:'15px'}}>{formatWithDayjs()}</span>
       <span style={{ fontSize:'15px', marginTop:'8px'}}>Session Status: <Tag style={{marginLeft:'10px'}} color='green'>● ON</Tag></span>
     </div>
     <div style={{backgroundColor:'white', display:'flex', justifyContent:'center', marginTop:'5px'}}>
