@@ -1,25 +1,18 @@
 import React, { useRef, useEffect, useState } from "react";
 
-const useCountdown = (durationSecs) => {
-  const [target, setTarget] = useState(Date.now() + durationSecs * 1000);
-  const [timeLeft, setTimeLeft] = useState(durationSecs);
-  const intervalRef = useRef(null);
+function useCountdown(durationSecs) {
+  const [remaining, setRemaining] = useState(durationSecs);
 
   useEffect(() => {
-    intervalRef.current = setInterval(() => {
-      const diffSecs = Math.ceil((target - Date.now()) / 1000);
-      if (diffSecs <= 0) {
-        setTarget(Date.now() + durationSecs * 1000);
-        setTimeLeft(durationSecs);
-      } else {
-        setTimeLeft(diffSecs);
-      }
+    const interval = setInterval(() => {
+      setRemaining(prev => prev > 0 ? prev - 1 : durationSecs);
     }, 1000);
-  }, [target, durationSecs])
 
-  return timeLeft;
+    return () => clearInterval(interval);
+  }, [durationSecs]);
+
+  return remaining;
 }
-
 export default function CountdownTimer() {
   const secs = useCountdown(780); // 13mins
   const mins = Math.floor(secs / 60);
